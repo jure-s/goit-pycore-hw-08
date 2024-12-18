@@ -1,11 +1,8 @@
 from collections import UserDict
-from models.record import Record
 from datetime import datetime, timedelta
 
 class AddressBook(UserDict):
     def add_record(self, record):
-        if not isinstance(record, Record):
-            raise TypeError("Record must be an instance of Record class.")
         self.data[record.name.value] = record
 
     def find(self, name):
@@ -26,7 +23,7 @@ class AddressBook(UserDict):
                 if next_birthday < today:
                     next_birthday = next_birthday.replace(year=today.year + 1)
                 if 0 <= (next_birthday - today).days <= days:
-                    upcoming.append((record.name.value, record.birthday.value.strftime("%d.%m.%Y")))
+                    upcoming.append((record.name.value, next_birthday.strftime("%d.%m.%Y")))
         return upcoming
 
     def __str__(self):

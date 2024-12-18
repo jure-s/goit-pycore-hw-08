@@ -1,0 +1,44 @@
+# Ігнорування файлів Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pkl
+
+# Логи та відладочна інформація
+*.log
+*.out
+*.err
+logs/
+
+# Файли середовища віртуального Python
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Секретні дані та конфігурації
+*.env
+*.secret
+config.json
+
+# Кеші
+*.swp
+*.swo
+*.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.~undo-tree
+.ipynb_checkpoints/
+
+# Дані програми
+contacts/
+addressbook.pkl
+
+# Інші файли
+*.bak
+*.tmp
